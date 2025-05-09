@@ -21,9 +21,9 @@ This package is NOT a general purpose library for working with libheif/heic file
 * [dsoprea/go-heic-exif-extractor/v2](https://github.com/dsoprea/go-heic-exif-extractor)
 * [dsoprea/go-jpeg-image-structure/v2](https://github.com/dsoprea/go-jpeg-image-structure)
 
-At the moment this package export a single method `ToJPEG` which reads HEIC image and EXIF data from an `io.Reader` instance and writes it back as JPEG and EXIF data to an `io.Writer` instance. For a concrete example have a look at the [cmd/heic2jpeg](cmd/heic2jpeg) tool.
+At the moment this package export a single `ToJPEG` method which reads HEIC image and EXIF data from an `io.Reader` instance and writes it back as JPEG and EXIF data to an `io.Writer` instance. For a concrete example have a look at the [cmd/heic2jpeg](cmd/heic2jpeg) tool.
 
-This is not anything which couldn't be done using ImageMagic, GraphicsMagick or any number of other tools but I wanted to see (understand) whether this could done in a "pure" Go package. Note that it is _not_ really a pure Go package since it depends on the presence of the `libheif` libraries but you get the idea.
+This is not anything which couldn't be done using ImageMagick, GraphicsMagick or any number of other tools but I wanted to see (understand) whether this could done in a "pure" Go package. Note that it is _not_ really a pure Go package since it depends on the presence of the `libheif` libraries but you get the idea.
 
 ## Tools
 
