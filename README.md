@@ -11,10 +11,17 @@ There are a bunch of existing packages for working with libheif/heic files but a
 
 This package is NOT a general purpose library for working with libheif/heic files and is little more than a thin wrapper around the following packages:
 
-* [strukturag/libheif](https://github.com/strukturag/libheif) and [strukturag/libheif-go](https://github.com/strukturag/libheif-go) for parsing HEIC data.
-* [dsoprea/go-heic-exif-extractor/v2](https://github.com/dsoprea/go-heic-exif-extractor) and [dsoprea/go-jpeg-image-structure/v2](https://github.com/dsoprea/go-jpeg-image-structure) for reading and writing EXIF data.
+### Parsing HEIC data
 
-As of this writing this package export a single method `ToJPEG` which reads HEIC image and EXIF data from an `io.Reader` instance and writes it back as JPEG and EXIF data to an `io.Writer` instance. For a concrete example have a look at the [cmd/heic2jpeg](cmd/heic2jpeg) tool.
+* [strukturag/libheif](https://github.com/strukturag/libheif)
+* [strukturag/libheif-go](https://github.com/strukturag/libheif-go)
+
+### Reading and writing EXIF data
+
+* [dsoprea/go-heic-exif-extractor/v2](https://github.com/dsoprea/go-heic-exif-extractor)
+* [dsoprea/go-jpeg-image-structure/v2](https://github.com/dsoprea/go-jpeg-image-structure)
+
+At the moment this package export a single method `ToJPEG` which reads HEIC image and EXIF data from an `io.Reader` instance and writes it back as JPEG and EXIF data to an `io.Writer` instance. For a concrete example have a look at the [cmd/heic2jpeg](cmd/heic2jpeg) tool.
 
 This is not anything which couldn't be done using ImageMagic, GraphicsMagick or any number of other tools but I wanted to see (understand) whether this could done in a "pure" Go package. Note that it is _not_ really a pure Go package since it depends on the presence of the `libheif` libraries but you get the idea.
 
@@ -39,6 +46,6 @@ Usage:
 ## See also
 
 * https://github.com/dsoprea/go-exif
-* https://github.com/dsoprea/go-heic-exif-extractor"
+* https://github.com/dsoprea/go-heic-exif-extractor
 * https://github.com/dsoprea/go-jpeg-image-structure
 * https://github.com/strukturag/libheif-go
